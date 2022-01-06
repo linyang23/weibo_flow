@@ -34,6 +34,7 @@ jobs:
           python-version: 3.6.15
       - name: run python
         run: |
+          pip install requests bs4
           python wbspd.py
       - name: commit
         run: |
