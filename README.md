@@ -12,36 +12,36 @@ Use workflow to load Weibo crawler
         name: weibo
 
         on:
-        schedule:
-        - cron: '20 9,1 * * *'
+            schedule:
+            - cron: '20 9,1 * * *'
 
-        workflow_dispatch:
+            workflow_dispatch:
 
         jobs:
-        build:
-            runs-on: ubuntu-latest
+            build:
+                runs-on: ubuntu-latest
 
-            steps:
-            - name: checkout
-                uses: actions/checkout@v2
-            - name: Set up Python 3.6.15
-                uses: actions/setup-python@v1
-                with:
-                python-version: 3.6.15
-            - name: run python
-                run: |
-                pip install requests bs4
-                python wbspd.py
-            - name: commit
-                run: |
-                git config --global user.email 287685124@qq.com
-                git config --global user.name linyang23
-                git add .
-                git commit -m "update" -a
-            - name: push
-                uses: ad-m/github-push-action@master
-                with:
-                GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+                steps:
+                    - name: checkout
+                        uses: actions/checkout@v2
+                    - name: Set up Python 3.6.15
+                        uses: actions/setup-python@v1
+                        with:
+                            python-version: 3.6.15
+                    - name: run python
+                        run: |
+                            pip install requests bs4
+                            python wbspd.py
+                    - name: commit
+                        run: |
+                            git config --global user.email 287685124@qq.com
+                            git config --global user.name linyang23
+                            git add .
+                            git commit -m "update" -a
+                    - name: push
+                        uses: ad-m/github-push-action@master
+                        with:
+                            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
 '''
 
