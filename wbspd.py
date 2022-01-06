@@ -75,7 +75,8 @@ class Weibo:
                 readbook += line.strip()
         print(readbook)
         with open(lujing, 'a', encoding="utf-8") as outlines:
-            outlines.write("更新时间：" + time[0] + '    \n')
+            ti = time[0][0:11] + str((int(time[0][11:13]) + 8) % 24) + time[0][13:]
+            outlines.write("更新时间：" + ti + '    \n')
             for i in range(len(rank)):
                 if keyword[i] not in readbook:
                     if "java" not in website[i]:
