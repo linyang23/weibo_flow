@@ -125,7 +125,7 @@ Use workflow to load Weibo crawler
                         readbook += line.strip()
                 print(readbook)
                 with open(lujing, 'a', encoding="utf-8") as outlines:
-                    if not (int(time[0][11:13]) + 8) // 24): 
+                    if (int(time[0][11:13]) + 8) // 24) == 0: 
                         ti = time[0][0:11] + str((int(time[0][11:13]) + 8) % 24) + time[0][13:]
                     else:
                         ti = time[0][0:8] + str(int(time[8:10]) + 1) + ' ' + str((int(time[0][11:13]) + 8) % 24) + time[0][13:]
