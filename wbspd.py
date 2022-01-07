@@ -75,7 +75,10 @@ class Weibo:
                 readbook += line.strip()
         print(readbook)
         with open(lujing, 'a', encoding="utf-8") as outlines:
-            ti = time[0][0:11] + str((int(time[0][11:13]) + 8) % 24) + time[0][13:]
+            if not (int(time[0][11:13]) + 8) // 24): 
+                ti = time[0][0:11] + str((int(time[0][11:13]) + 8) % 24) + time[0][13:]
+            else:
+                ti = time[0][0:8] + str(int(time[8:10]) + 1) + ' ' + str((int(time[0][11:13]) + 8) % 24) + time[0][13:]
             outlines.write("更新时间：" + ti + '    \n')
             for i in range(len(rank)):
                 if keyword[i] not in readbook:
