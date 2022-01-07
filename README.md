@@ -13,7 +13,7 @@ Use workflow to load Weibo crawler
 
         on:
             schedule:
-            - cron: '20 9,1 * * *'
+            - cron: '30 */6 * * *'
 
             workflow_dispatch:
 
