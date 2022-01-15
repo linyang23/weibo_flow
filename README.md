@@ -151,9 +151,10 @@ Use workflow to load Weibo crawler
 
         if __name__ == '__main__':
             weibo = Weibo()
-            flag = True
-            weibo.run()
-            flag = False
+            try:
+                weibo.run()
+            except:
+                print("@@")
 
 
 '''
