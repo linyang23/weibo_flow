@@ -4,7 +4,7 @@ Use workflow to load Weibo crawler
 #### 互联网的影子
 |🐞|🐌|🐙|🐚|🐠|🐬|
 |:-----------------------:|:-----------------------:|:-----------------------:|:-----------------------:|:-----------------------:|:-----------------------:|
-|[202201](https://github.com/linyang23/weibo_flow/blob/main/2022-01.md)|[202202](https://github.com/linyang23/weibo_flow/blob/main/2022-02.md)|[202203](https://github.com/linyang23/weibo_flow/blob/main/2022-03.md)|
+|[202201](https://github.com/linyang23/weibo_flow/blob/main/2022-01.md)|[202202](https://github.com/linyang23/weibo_flow/blob/main/2022-02.md)|[202203](https://github.com/linyang23/weibo_flow/blob/main/2022-03.md)|[202204](https://github.com/linyang23/weibo_flow/blob/main/2022-04.md)|
 
 #### 核心workflow配置
 '''
